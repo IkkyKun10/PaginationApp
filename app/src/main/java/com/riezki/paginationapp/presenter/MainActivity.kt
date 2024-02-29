@@ -1,4 +1,4 @@
-package com.riezki.paginationapp
+package com.riezki.paginationapp.presenter
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,8 +10,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.riezki.paginationapp.ui.theme.PaginationAppTheme
+import com.riezki.paginationapp.presenter.ui.theme.PaginationAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

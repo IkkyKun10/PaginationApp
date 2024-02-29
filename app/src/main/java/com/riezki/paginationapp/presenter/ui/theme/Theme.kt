@@ -1,4 +1,4 @@
-package com.riezki.paginationapp.ui.theme
+package com.riezki.paginationapp.presenter.ui.theme
 
 import android.app.Activity
 import android.os.Build

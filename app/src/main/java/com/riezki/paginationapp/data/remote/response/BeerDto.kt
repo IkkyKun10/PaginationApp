@@ -1,4 +1,4 @@
-package com.riezki.paginationapp.data.remote
+package com.riezki.paginationapp.data.remote.response
 
 import com.squareup.moshi.Json
 

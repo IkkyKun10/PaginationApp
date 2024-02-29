@@ -1,6 +1,6 @@
 package com.riezki.paginationapp.domain.model
 
-data class Beers (
+data class Beer (
     val id: Int,
     val name: String,
     val tagline: String,

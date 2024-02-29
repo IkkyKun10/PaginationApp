@@ -1,11 +1,11 @@
 package com.riezki.paginationapp.data.mappers
 
-import com.riezki.paginationapp.data.local.BeersEntity
-import com.riezki.paginationapp.data.remote.BeerDto
-import com.riezki.paginationapp.domain.model.Beers
+import com.riezki.paginationapp.data.local.entity.BeerEntity
+import com.riezki.paginationapp.data.remote.response.BeerDto
+import com.riezki.paginationapp.domain.model.Beer
 
-fun BeerDto.toBeerEntity() : BeersEntity {
-    return BeersEntity(
+fun BeerDto.toBeerEntity() : BeerEntity {
+    return BeerEntity(
         id = id,
         name = name,
         tagline = tagline,
@@ -15,8 +15,8 @@ fun BeerDto.toBeerEntity() : BeersEntity {
     )
 }
 
-fun BeersEntity.toBeerDomain() : Beers {
-    return Beers(
+fun BeerEntity.toBeerDomain() : Beer {
+    return Beer(
         id = id,
         name = name,
         tagline = tagline,

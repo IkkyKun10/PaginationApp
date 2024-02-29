@@ -1,5 +1,6 @@
-package com.riezki.paginationapp.data.remote
+package com.riezki.paginationapp.data.remote.service
 
+import com.riezki.paginationapp.data.remote.response.BeerDto
 import retrofit2.http.GET
 import retrofit2.http.Query
 
