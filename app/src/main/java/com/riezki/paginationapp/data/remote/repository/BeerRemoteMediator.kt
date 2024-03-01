@@ -9,8 +9,10 @@ import com.riezki.paginationapp.data.local.db.BeerDatabase
 import com.riezki.paginationapp.data.local.entity.BeerEntity
 import com.riezki.paginationapp.data.mappers.toBeerEntity
 import com.riezki.paginationapp.data.remote.service.BeerApi
+import kotlinx.coroutines.delay
 import retrofit2.HttpException
 import java.io.IOException
+import kotlin.time.Duration.Companion.seconds
 
 @OptIn(ExperimentalPagingApi::class)
 class BeerRemoteMediator(
@@ -36,6 +38,8 @@ class BeerRemoteMediator(
                     }
                 }
             }
+
+            delay(2.seconds)
 
             val beers = beerApi.getBeers(
                 page = loadKey,
