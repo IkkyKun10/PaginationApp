@@ -15,7 +15,7 @@ class BeerViewModel @Inject constructor(
     private val useCase: BeerUseCase
 ) : ViewModel() {
 
-    val beerPagingFlow = useCase.getBeersPaging().flow
+    val beerPagingFlow = useCase().flow
         .map { pagingData ->
             pagingData.map { it.toBeerDomain() }
         }
