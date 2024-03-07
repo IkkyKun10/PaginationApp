@@ -6,6 +6,7 @@ import com.riezki.paginationapp.data.local.db.BeerDatabase
 import com.riezki.paginationapp.data.remote.repository.PaginationRepositoryImpl
 import com.riezki.paginationapp.data.remote.service.BeerApi
 import com.riezki.paginationapp.domain.repository.BeerRepository
+import com.riezki.paginationapp.domain.usecase.BeerInteraction
 import com.riezki.paginationapp.domain.usecase.BeerUseCase
 import dagger.Module
 import dagger.Provides
@@ -22,7 +23,7 @@ object AppModule {
     @Provides
     @Singleton
     fun provideUseCase(repository: BeerRepository) : BeerUseCase {
-        return BeerUseCase(repository)
+        return BeerInteraction(repository)
     }
 
     @Provides

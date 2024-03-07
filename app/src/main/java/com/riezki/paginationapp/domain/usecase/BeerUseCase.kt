@@ -1,9 +1,8 @@
 package com.riezki.paginationapp.domain.usecase
 
-import com.riezki.paginationapp.domain.repository.BeerRepository
+import androidx.paging.Pager
+import com.riezki.paginationapp.data.local.entity.BeerEntity
 
-class BeerUseCase(
-    private val repository: BeerRepository
-) {
-    operator fun invoke() = repository.getBeersPaging()
+interface BeerUseCase {
+    operator fun invoke() : Pager<Int, BeerEntity>
 }

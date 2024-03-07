@@ -3,6 +3,7 @@ package com.riezki.paginationapp.presenter.ui
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -42,10 +43,10 @@ fun BeerScreen(
         } else {
             LazyColumn(
                 modifier = Modifier
-                    .padding(horizontal = 16.dp, vertical = 16.dp)
                     .fillMaxSize(),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
+                contentPadding = PaddingValues(16.dp)
             ) {
                 items(
                     count = beers.itemCount,
